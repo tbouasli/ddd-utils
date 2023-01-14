@@ -1,6 +1,6 @@
 {
   "name": "@thomasbouasli/ddd-utils",
-  "version": "1.0.7",
+  "version": "1.0.6",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
@@ -11,8 +11,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\"",
-    "postpublish": "npm publish --registry=https://npm.pkg.github.com"
+    "test": "echo \"Error: no test specified\""
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
