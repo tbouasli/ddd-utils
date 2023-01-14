@@ -1,8 +1,11 @@
 {
-  "name": "ddd-utils",
+  "name": "@thomasbouasli/ddd-utils",
   "version": "1.0.0",
   "main": "dist/index.js",
-  "repository": "https://github.com/ThomasBouasli/ddd-utils.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThomasBouasli/ddd-utils.git"
+  },
   "author": "Thomas Bouasli <thomas@nex.digital>",
   "license": "MIT",
   "scripts": {
@@ -16,5 +19,10 @@
   "dependencies": {
     "shallow-equal-object": "^1.1.1",
     "uuid": "^9.0.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/ThomasBouasli/ddd-utils/issues"
+  },
+  "homepage": "https://github.com/ThomasBouasli/ddd-utils#readme",
+  "description": ""
 }
