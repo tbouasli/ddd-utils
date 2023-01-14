@@ -9,7 +9,8 @@
   "author": "Thomas Bouasli <thomas@nex.digital>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\""
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
