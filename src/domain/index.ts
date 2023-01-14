@@ -1,6 +1,7 @@
 export * from "./AggregateRoot";
 export * from "./Entity";
 export * from "./ValueObject";
+export * from "./UniqueIdentifier";
 export * from "./WatchedList";
 export * from "./events/DomainEvents";
 export * from "./events/IDomainEvent";
