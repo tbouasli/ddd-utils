@@ -2,6 +2,7 @@
   "name": "@thomasbouasli/ddd-utils",
   "version": "1.0.3",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ThomasBouasli/ddd-utils.git"
