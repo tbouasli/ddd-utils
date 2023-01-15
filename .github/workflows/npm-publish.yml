@@ -50,7 +50,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_ACCESS_TOKEN}}
   publish-gpr:
-    needs: [build, publish-npm]
+    needs: [build]
     runs-on: ubuntu-latest
     permissions:
       contents: read
