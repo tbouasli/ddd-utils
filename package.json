@@ -19,6 +19,7 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
+    "class-validator": "^0.14.0",
     "shallow-equal-object": "^1.1.1",
     "uuid": "^9.0.0"
   },
