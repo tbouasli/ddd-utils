@@ -1,6 +1,6 @@
 import { validate } from "class-validator";
 import { UniqueIdentifier } from "./UniqueIdentifier";
-import { DomainValidationError, Either, left, right } from "src/errors";
+import { DomainValidationError, Either, left, right } from "../errors/index";
 
 const isEntity = (v: any): v is Entity<any> => {
   return v instanceof Entity;
