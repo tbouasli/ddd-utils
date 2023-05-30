@@ -1,6 +1,6 @@
 import { UniqueIdentifier } from "./UniqueIdentifier";
 
-const isEntity = (v: any): v is Entity<any> => {
+const isEntity = (v: any): v is Entity => {
   return v instanceof Entity;
 };
 
@@ -9,7 +9,7 @@ const isEntity = (v: any): v is Entity<any> => {
  * equality through their unique identifier.
  */
 
-export abstract class Entity<T> {
+export abstract class Entity {
   protected readonly _id: UniqueIdentifier;
 
   constructor(id?: string) {
@@ -20,7 +20,7 @@ export abstract class Entity<T> {
     return this._id;
   }
 
-  public equals(entityOrString?: Entity<T> | string): boolean {
+  public equals(entityOrString?: Entity | string): boolean {
     if (entityOrString == null || entityOrString == undefined) {
       return false;
     }
