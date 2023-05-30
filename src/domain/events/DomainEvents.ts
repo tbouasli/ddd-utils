@@ -1,10 +1,10 @@
-import { AggregateRoot } from "../AggregateRoot";
-import { UniqueIdentifier } from "../UniqueIdentifier";
-import { IDomainEvent } from "./IDomainEvent";
+import { AggregateRoot } from '../AggregateRoot';
+import { UniqueIdentifier } from '../UniqueIdentifier';
+import { IDomainEvent } from './IDomainEvent';
 
 export class DomainEvents {
   private static handlersMap = {};
-  private static markedAggregates: AggregateRoot[] = [];
+  private static markedAggregates: AggregateRoot<any>[] = [];
 
   /**
    * @method markAggregateForDispatch
@@ -14,7 +14,7 @@ export class DomainEvents {
    * the unit of work.
    */
 
-  public static markAggregateForDispatch(aggregate: AggregateRoot): void {
+  public static markAggregateForDispatch(aggregate: AggregateRoot<any>): void {
     const aggregateFound = !!this.findMarkedAggregateByID(aggregate.id);
 
     if (!aggregateFound) {
@@ -22,21 +22,23 @@ export class DomainEvents {
     }
   }
 
-  private static dispatchAggregateEvents(aggregate: AggregateRoot): void {
+  private static dispatchAggregateEvents(aggregate: AggregateRoot<any>): void {
     aggregate.domainEvents.forEach((event: IDomainEvent) =>
-      this.dispatch(event)
+      this.dispatch(event),
     );
   }
 
   private static removeAggregateFromMarkedDispatchList(
-    aggregate: AggregateRoot
+    aggregate: AggregateRoot<any>,
   ): void {
     const index = this.markedAggregates.findIndex((a) => a.equals(aggregate));
     this.markedAggregates.splice(index, 1);
   }
 
-  private static findMarkedAggregateByID(id: UniqueIdentifier): AggregateRoot {
-    let found: AggregateRoot = null;
+  private static findMarkedAggregateByID(
+    id: UniqueIdentifier,
+  ): AggregateRoot<any> {
+    let found: AggregateRoot<any> = null;
     for (const aggregate of this.markedAggregates) {
       if (aggregate.id.equals(id)) {
         found = aggregate;
@@ -58,7 +60,7 @@ export class DomainEvents {
 
   public static register(
     callback: (event: IDomainEvent) => void,
-    eventClassName: string
+    eventClassName: string,
   ): void {
     if (!this.handlersMap.hasOwnProperty(eventClassName)) {
       this.handlersMap[eventClassName] = [];
