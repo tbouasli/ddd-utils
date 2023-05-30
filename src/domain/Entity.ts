@@ -1,4 +1,4 @@
-import { UniqueIdentifier } from './UniqueIdentifier';
+import { UniqueIdentifier } from "./UniqueIdentifier";
 
 const isEntity = (v: any): v is Entity<any> => {
   return v instanceof Entity;
@@ -11,30 +11,28 @@ const isEntity = (v: any): v is Entity<any> => {
 
 export abstract class Entity<T> {
   protected readonly _id: UniqueIdentifier;
-  public readonly props: T;
 
-  constructor(props: T, id?: string) {
+  constructor(id?: string) {
     this._id = id ? new UniqueIdentifier(id) : new UniqueIdentifier();
-    this.props = props;
   }
 
   get id(): UniqueIdentifier {
     return this._id;
   }
 
-  public equals(object?: Entity<T>): boolean {
-    if (object == null || object == undefined) {
+  public equals(entityOrString?: Entity<T> | string): boolean {
+    if (entityOrString == null || entityOrString == undefined) {
       return false;
     }
 
-    if (this === object) {
-      return true;
+    const isAnEntity = isEntity(entityOrString);
+
+    if (isAnEntity) {
+      return this._id.equals(entityOrString._id);
+    } else if (typeof entityOrString === "string") {
+      return this._id.equals(new UniqueIdentifier(entityOrString));
     }
 
-    if (!isEntity(object)) {
-      return false;
-    }
-
-    return this._id.equals(object._id);
+    return false;
   }
 }
