@@ -1,14 +1,14 @@
-import { Entity } from './Entity';
-import { UniqueIdentifier } from './UniqueIdentifier';
-import { DomainEvents } from './events/DomainEvents';
-import { IDomainEvent } from './events/IDomainEvent';
+import { Entity } from "./Entity";
+import { UniqueIdentifier } from "./UniqueIdentifier";
+import { DomainEvents } from "./events/DomainEvents";
+import { IDomainEvent } from "./events/IDomainEvent";
 
 /**
  * @desc AggregateRoots are entities that are the root of a
  * subgraph of objects that can be treated as a single unit.
  */
 
-export abstract class AggregateRoot<T> extends Entity<T> {
+export abstract class AggregateRoot extends Entity {
   private _domainEvents: IDomainEvent[] = [];
 
   get id(): UniqueIdentifier {
@@ -39,8 +39,8 @@ export abstract class AggregateRoot<T> extends Entity<T> {
     console.info(
       `[Domain Event Created]:`,
       thisClass.constructor.name,
-      '==>',
-      domainEventClass.constructor.name,
+      "==>",
+      domainEventClass.constructor.name
     );
   }
 }
