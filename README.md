@@ -10,6 +10,10 @@ You can install this package via npm:
 npm install @thomasbouasli/ddd-utils
 ```
 
+## How to use this package
+
+If you are starting out with DDD or want to learn more about it, I recommend reading [@stemmlerjs](https://github.com/stemmlerjs) excellent articles found on [khalilstemmler.com](https://khalilstemmler.com/) and watching [@CodeOpinion](https://www.youtube.com/@CodeOpinion) youtube channel, which contains many helpful videos.
+
 ## Usage
 
 ### Aggregate Root
