@@ -1,5 +1,5 @@
 {
-    "name": "@thomasbouasli/ddd-utils",
+    "name": "domain-utilities",
     "version": "1.6.1",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
