@@ -7,7 +7,7 @@ This npm package provides a set of utilities for building domain-driven design (
 You can install this package via npm:
 
 ```bash
-npm install @thomasbouasli/ddd-utils
+npm install domain-utilities
 ```
 
 ## How to use this package
@@ -19,7 +19,7 @@ If you are starting out with DDD or want to learn more about it, I recommend rea
 ### Aggregate Root
 
 ```javascript
-import { AggregateRoot, Entity, UniqueIdentifier, DomainEvents } from '@thomasbouasli/ddd-utils';
+import { AggregateRoot, Entity, UniqueIdentifier, DomainEvents } from 'domain-utilities';
 
 class MyAggregate extends AggregateRoot<MyAggregateProps> {
   // Your custom methods and properties here
@@ -42,7 +42,7 @@ const domainEvents = myAggregate.domainEvents;
 ### Entity
 
 ```javascript
-import { Entity, UniqueIdentifier } from '@thomasbouasli/ddd-utils';
+import { Entity, UniqueIdentifier } from 'domain-utilities';
 
 class MyEntity extends Entity<MyEntityProps> {
   // Your custom methods and properties here
@@ -59,7 +59,7 @@ const isEqual = myEntity.equals(anotherEntity);
 ### Value Object
 
 ```javascript
-import { ValueObject } from '@thomasbouasli/ddd-utils';
+import { ValueObject } from 'domain-utilities';
 
 class MyValueObject extends ValueObject<MyValueObjectProps> {
   // Your custom methods and properties here
@@ -76,7 +76,7 @@ const isEqual = valueObject1.equals(valueObject2);
 ### Domain Events
 
 ```javascript
-import { DomainEvents, IDomainEvent } from '@thomasbouasli/ddd-utils';
+import { DomainEvents, IDomainEvent } from 'domain-utilities';
 
 // Register a handler for a specific domain event
 DomainEvents.register((event: MyDomainEvent) => {
@@ -93,7 +93,7 @@ DomainEvents.dispatchEventsForAggregate(aggregateId);
 ### Decorators
 
 ```javascript
-import { OnEvent } from '@thomasbouasli/ddd-utils';
+import { OnEvent } from 'domain-utilities';
 
 class MyEventHandler {
   @OnEvent('MyDomainEventClassName')
@@ -106,7 +106,7 @@ class MyEventHandler {
 ### Use Cases
 
 ```javascript
-import { IUseCase } from '@thomasbouasli/ddd-utils';
+import { IUseCase } from 'domain-utilities';
 
 class MyUseCase implements IUseCase<MyRequest, MyResponse> {
   async execute(request: MyRequest): Promise<MyResponse> {
@@ -118,7 +118,7 @@ class MyUseCase implements IUseCase<MyRequest, MyResponse> {
 ### Errors
 
 ```javascript
-import { ApplicationError, DomainValidationError, Either, left, right } from '@thomasbouasli/ddd-utils';
+import { ApplicationError, DomainValidationError, Either, left, right } from 'domain-utilities';
 
 // Custom application error
 throw new ApplicationError('An error occurred in the application.');
@@ -133,7 +133,7 @@ const result: Either<ErrorType, SuccessType> = left(new ErrorType('Error message
 ### Infrastructure
 
 ```javascript
-import { iMapper, iRepository } from '@thomasbouasli/ddd-utils';
+import { iMapper, iRepository } from 'domain-utilities';
 
 // Define a custom mapper for persistence
 class MyMapper implements iMapper<PersistenceType, AggregateType> {
