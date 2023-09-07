@@ -1,4 +1,4 @@
-export class DomainValidationError extends Error {
+export class ApplicationError extends Error {
     constructor(message: string) {
         super(message);
     }

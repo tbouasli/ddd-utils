@@ -6,29 +6,29 @@ import { v4 as uuid, validate } from 'uuid';
  */
 
 export class UniqueIdentifier {
-  private readonly _id: string;
+    private readonly _id: string;
 
-  constructor(id?: string) {
-    if (id && !validate(id)) {
-      throw new Error('Invalid id');
+    constructor(id?: string) {
+        if (id && !validate(id)) {
+            throw new Error('Invalid id');
+        }
+
+        this._id = id || uuid();
     }
 
-    this._id = id || uuid();
-  }
-
-  get value(): string {
-    return this._id;
-  }
-
-  equals(id?: UniqueIdentifier): boolean {
-    if (id === null || id === undefined) {
-      return false;
+    get value(): string {
+        return this._id;
     }
 
-    if (!(id instanceof UniqueIdentifier)) {
-      return false;
-    }
+    equals(id?: UniqueIdentifier): boolean {
+        if (id === null || id === undefined) {
+            return false;
+        }
 
-    return this.value === id.value;
-  }
+        if (!(id instanceof UniqueIdentifier)) {
+            return false;
+        }
+
+        return this.value === id.value;
+    }
 }

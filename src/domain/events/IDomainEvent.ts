@@ -7,6 +7,6 @@ import { UniqueIdentifier } from '../UniqueIdentifier';
  */
 
 export interface IDomainEvent {
-  dateTimeOccurred: Date;
-  getAggregateId(): UniqueIdentifier;
+    dateTimeOccurred: Date;
+    getAggregateId(): UniqueIdentifier;
 }

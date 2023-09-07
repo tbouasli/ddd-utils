@@ -4,11 +4,11 @@ This is a collection of utilities for Domain Driven Design based on Khallil Stem
 
 ## Utilities
 
-- Entity
-- ValueObject
-- AggregateRoot
-- UniqueIdentifier
-- DomainEvents
-- IDomainEvent
-- IHandle
-- WatchedList
+-   Entity
+-   ValueObject
+-   AggregateRoot
+-   UniqueIdentifier
+-   DomainEvents
+-   IDomainEvent
+-   IHandle
+-   WatchedList

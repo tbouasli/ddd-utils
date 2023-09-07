@@ -1,3 +1,2 @@
-export * from "./http";
-export * from "./domain";
-export * from "./either";
+export * from './domain';
+export * from './either';

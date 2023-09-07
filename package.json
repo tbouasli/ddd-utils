@@ -1,31 +1,34 @@
 {
-  "name": "@thomasbouasli/ddd-utils",
-  "version": "1.5.1",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ThomasBouasli/ddd-utils.git"
-  },
-  "author": "Thomas Bouasli <thomas@nex.digital>",
-  "license": "MIT",
-  "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\""
-  },
-  "devDependencies": {
-    "@types/node": "^18.11.18",
-    "@types/uuid": "^9.0.0",
-    "typescript": "^4.9.4"
-  },
-  "dependencies": {
-    "class-validator": "^0.14.0",
-    "shallow-equal-object": "^1.1.1",
-    "uuid": "^9.0.0"
-  },
-  "bugs": {
-    "url": "https://github.com/ThomasBouasli/ddd-utils/issues"
-  },
-  "homepage": "https://github.com/ThomasBouasli/ddd-utils#readme",
-  "description": ""
+    "name": "@thomasbouasli/ddd-utils",
+    "version": "1.5.1",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ThomasBouasli/ddd-utils.git"
+    },
+    "author": "Thomas Bouasli <thomas.bouasli@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "build": "tsc",
+        "test": "echo \"Error: no test specified\""
+    },
+    "devDependencies": {
+        "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+        "@types/node": "^18.11.18",
+        "@types/uuid": "^9.0.0",
+        "np": "^8.0.4",
+        "prettier": "^3.0.3",
+        "typescript": "^4.9.4"
+    },
+    "dependencies": {
+        "class-validator": "^0.14.0",
+        "shallow-equal-object": "^1.1.1",
+        "uuid": "^9.0.0"
+    },
+    "bugs": {
+        "url": "https://github.com/ThomasBouasli/ddd-utils/issues"
+    },
+    "homepage": "https://github.com/ThomasBouasli/ddd-utils#readme",
+    "description": ""
 }
