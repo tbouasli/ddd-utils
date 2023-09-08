@@ -16,7 +16,7 @@
         "strictBindCallApply": false,
         "forceConsistentCasingInFileNames": false,
         "noFallthroughCasesInSwitch": false,
-        "baseUrl": "src",
+        "baseUrl": "./src",
         "paths": {
             "@/*": ["*"]
         }

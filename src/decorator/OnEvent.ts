@@ -1,4 +1,4 @@
-import { DomainEvents, IDomainEvent } from '@/domain';
+import { DomainEvents } from '@/domain';
 
 /**
  * Decorator function for registering a handler for a DomainEvent.
