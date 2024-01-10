@@ -1,3 +1,3 @@
-export interface IQuery<TResult> {
-    execute(): TResult;
+export interface IQuery<TRequest, TResult> {
+    execute(query: TRequest): TResult;
 }
