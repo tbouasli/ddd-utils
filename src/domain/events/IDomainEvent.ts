@@ -1,4 +1,4 @@
-import { UniqueIdentifier } from '../UniqueIdentifier';
+import { UniqueIdentifier } from '../unique-identifier';
 
 /**
  * @desc Interface for Domain Events

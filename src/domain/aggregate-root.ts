@@ -1,5 +1,5 @@
-import { Entity } from './Entity';
-import { UniqueIdentifier } from './UniqueIdentifier';
+import { Entity } from './entity';
+import { UniqueIdentifier } from './unique-identifier';
 import { DomainEvents } from './events/DomainEvents';
 import { IDomainEvent } from './events/IDomainEvent';
 

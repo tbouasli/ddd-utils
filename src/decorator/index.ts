@@ -1,1 +1,1 @@
-export * from './OnEvent';
+export * from './on-event';

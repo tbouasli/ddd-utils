@@ -1,2 +1,2 @@
-export * from './IMapper';
-export * from './IRepository';
+export * from './mapper';
+export * from './repository';

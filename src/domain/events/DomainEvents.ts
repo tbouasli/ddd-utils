@@ -1,5 +1,5 @@
-import { AggregateRoot } from '../AggregateRoot';
-import { UniqueIdentifier } from '../UniqueIdentifier';
+import { AggregateRoot } from '../aggregate-root';
+import { UniqueIdentifier } from '../unique-identifier';
 import { IDomainEvent } from './IDomainEvent';
 
 export class DomainEvents {
